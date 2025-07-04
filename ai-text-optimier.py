@@ -61,7 +61,7 @@ def llm_evaluator(provider, prompt, response):
     )
     
     # Get evaluation from LLM with temperature=0 for consistency
-    evaluation_result = chat_with_llm(provider, evaluator_system_message, evaluation_prompt, temperature=0)
+    evaluation_result = generate_llm_response(provider, evaluator_system_message, evaluation_prompt, temperature=0)
     
     # Parse the evaluation score
     # Look for explicit score mentions in the response
